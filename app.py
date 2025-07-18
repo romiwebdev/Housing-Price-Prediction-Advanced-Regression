@@ -50,7 +50,7 @@ def preprocess_input(input_df):
         processed[num_col] = input_df[num_col]
     
     # Set nilai 1 untuk fitur kategori yang dipilih
-    for cat_col in input_df['categorical_features']:
+    for cat_col in input_df['categorical_features'].iloc[0]:
         if cat_col in processed.columns:
             processed[cat_col] = 1
     
