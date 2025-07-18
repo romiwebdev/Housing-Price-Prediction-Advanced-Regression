@@ -127,8 +127,9 @@ if submit_button:
     }
     
     # Preprocess input
-    input_df = pd.DataFrame(input_data, index=[0])
+    input_df = pd.DataFrame([input_data])
     processed_input = preprocess_input(input_df)
+
     
     # Scaling
     scaled_input = scaler.transform(processed_input)
